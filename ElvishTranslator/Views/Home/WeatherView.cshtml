@@ -1,0 +1,82 @@
+﻿@model IEnumerable<ElvishTranslator.Models.ElvishTranslatorModel>
+
+@{
+    ViewData["Title"] = "WeatherView";
+}
+
+<h1>WeatherView</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.timepoint)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cloudcover)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.seeing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.transparency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lifted_index)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rh2m)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.temp2m)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.wind10m.direction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.wind10m.speed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prec_type)
+            </th>
+            <th>   @Html.ActionLink("Export", "Export") </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.timepoint)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cloudcover)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.seeing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.transparency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lifted_index)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rh2m)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.temp2m)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wind10m.direction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wind10m.speed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prec_type)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

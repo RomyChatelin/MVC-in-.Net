@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ElvishTranslator.Models.Pet>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.pet_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.animal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.breed)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.pet_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.animal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.breed)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
